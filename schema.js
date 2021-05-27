@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Query {
     "Get the root skill node"
     rootSkill: Skill
+    children(id: ID!): [Skill]
   }
   "A skill is either a single, indivisible knowledge area or a larger, more broad collection of other skills"
   type Skill {
